@@ -62,7 +62,7 @@ body {
   font-family: Roboto;
   color: #fff;
   font-weight: 200;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 * {
   cursor: url(/img/cursor.png) 16 16, auto;
@@ -920,10 +920,30 @@ circle.middle {
 .swipe .nextPoints .points {
   display: inline-block;
   margin: 10px;
-  width: 35px;
-  height: 35px;
-  padding: 8px;
+  width: 50px;
+  height: 50px;
+  padding: 16px;
   border-radius: 50%;
+  opacity: 0;
+  transition: 1.5s transform ease-out, 0.3s opacity linear;
+}
+.swipe .nextPoints .ether.active,
+.swipe .nextPoints .points.active {
+  opacity: 1;
+}
+.swipe .nextPoints .ether.active.invisible,
+.swipe .nextPoints .points.active.invisible {
+  display: none;
+}
+.swipe .nextPoints .ether.active {
+  transform: translate(-3vw, 40vh);
+}
+.swipe .nextPoints .points.active {
+  transform: translate(3vw, 40vh);
+}
+.swipe .filterClass {
+  -webkit-filter: url("#goo");
+  filter: url("../swipe.html#goo");
 }
 .swipe .currentPoints {
   text-align: center;

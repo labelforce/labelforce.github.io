@@ -669,9 +669,33 @@ var Lib;
                     var score = value.val()[Util.HashUtil.getHashNum()];
                     log.info('Leveling', 'score received', score);
                     if (score !== null) {
-                        _this.ether = score.ether;
-                        _this.points = score.exp;
-                        _this.update();
+                        _this.nextEther = Math.abs(_this.ether - score.ether);
+                        _this.nextPoints = Math.abs(_this.points - score.exp);
+                        var nextEther = document.getElementById('next-ether');
+                        var nextPoints = document.getElementById('next-points');
+                        var currentEther = document.getElementById('ether');
+                        var currentPoints = document.getElementById('points');
+                        nextEther.innerHTML = _this.nextEther.toString();
+                        nextPoints.innerHTML = _this.nextPoints.toString();
+                        nextPoints.classList.add('active');
+                        nextEther.classList.add('active');
+                        // lets do some animation at 7.25 am ;)
+                        var delay = 90;
+                        var distance = 180;
+                        // 1.5 sec is needed for the css animation
+                        setTimeout(function () {
+                            _this.ether = score.ether;
+                            _this.points = score.exp;
+                            _this.update();
+                            nextPoints.classList.add('invisible');
+                            nextEther.classList.add('invisible');
+                            nextPoints.classList.remove('active');
+                            nextEther.classList.remove('active');
+                            setTimeout(function () {
+                                nextPoints.classList.remove('invisible');
+                                nextEther.classList.remove('invisible');
+                            }, 1500);
+                        }, 1500);
                     }
                 });
             });

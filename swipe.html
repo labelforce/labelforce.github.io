@@ -31,29 +31,45 @@
         </div>
     </div>
 
-    <div class="nextPoints">
-        <div class="ether js-nextEther"></div>
-        <div class="points js-nextPoints"></div>
-    </div>
+		<div class="filterClass">
+		
+			<div class="nextPoints">
+					<div class="ether js-nextEther bounce" id="next-ether"></div>
+					<div class="points js-nextPoints bounce" id="next-points"></div>
+			</div>
 
-    <div class="currentPoints">
-        <div class="ether">
-            <img src="/img/ether_e.svg" alt=""><br>
-            <span class="js-ether"></span><br>
-            <small>Ether</small>
-        </div>
-        <div class="points">
-            <img src="/img/exp_crown.svg" alt=""><br>
-            <span class="js-points"></span><br>
-            <small>Experience</small>
-        </div>
-    </div>
+			<div class="currentPoints">
+					<div class="ether" id="ether">
+							<img src="/img/ether_e.svg" alt=""><br>
+							<span class="js-ether"></span><br>
+							<small>Ether</small>
+					</div>
+					<div class="points" id="points">
+							<img src="/img/exp_crown.svg" alt=""><br>
+							<span class="js-points"></span><br>
+							<small>Experience</small>
+					</div>
+			</div>
+
+		</div>
 
 
 
 </div>
 
 <script>window.view = 'swipe'</script>
+<script src="tweenmax.js"></script>
 <script src="main.js"></script>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<defs>
+		<filter id="goo">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+		</filter>
+	</defs>
+</svg>
+
 </body>
 </html>
