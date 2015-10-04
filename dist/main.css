@@ -55,14 +55,24 @@
   }
 }
 body {
+  font-family: 'Proxima Nova';
+  color: #fff;
+  font-weight: 200;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.4);
+}
+body::after {
   background: #222;
   background-image: url(/img/background.png);
   background-size: cover;
   background-position: center;
-  font-family: Roboto;
-  color: #fff;
-  font-weight: 200;
-  min-height: 100vh;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
 }
 * {
   cursor: url(/img/cursor.png) 16 16, auto;
@@ -891,7 +901,6 @@ circle.middle {
 .swipe .like-button,
 .swipe .dislike-button {
   height: 100%;
-  background: #fff;
   padding: 15px;
 }
 .swipe .quest {
@@ -906,12 +915,6 @@ circle.middle {
   font-size: 40px;
   margin-bottom: 25px;
   text-align: center;
-}
-.swipe .ether {
-  background: #d84141;
-}
-.swipe .points {
-  background: #3ec0dd;
 }
 .swipe .nextPoints {
   text-align: center;
@@ -957,14 +960,23 @@ circle.middle {
   text-align: center;
   display: inline-block;
   margin: 10px;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 8vh;
+  background-size: 100%;
+}
+.swipe .currentPoints .ether {
+  background-image: url('../img/blau_kreis.svg');
+}
+.swipe .currentPoints .points {
+  background-image: url('../img/rot_kreis.svg');
 }
 .swipe .currentPoints small {
-  font-size: .5em;
-  text-transform: uppercase;
+  transform: translateY(-4vh);
+  display: inline-block;
+  position: relative;
+  font-size: 3vh;
 }
 body.labelforceApp {
   background: url(/img/background_startscreen.png);
