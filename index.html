@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LabelForce.co</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: 'Roboto';
+				background: url('/img/background.png');
+				color: white;
+				font-weight: 200;
+			}
+
+			h1 {
+				font-size: 10vh;
+			}
+
+			h2 {
+				font-size: 3vh;
+				letter-spacing: 0.045em;
+			}
+
+			h1, h2 {
+				width: 100vw;
+				text-align: center
+			}
+
+			.logo {
+				width: 100vw;
+				text-align: center;
+				margin-top: 2vh;
+			}
+
+			.logo img {
+				width: 50vw;
+			}
+
+			ul.features {
+				max-width: 80vw;
+				margin: 10vh 10vw;
+				display: flex;
+			}
+
+			@media (max-width: 720px) {
+				ul.features {
+					flex-direction: column;
+				}
+			}
+
+
+			ul.features li {
+				text-align: center;
+				flex: 1;
+			}
+
+
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+
+			li img {
+				height: 25vh;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			p, a {
+				line-height: 1.5;
+			}
+
+			.intro {
+				max-width: 65vw;
+				margin: 0 auto;
+
+			}
+
+			a {
+				color: white;
+				font-weight: bold;
+			}
+
+			a h3 {
+				text-decoration: none;
+			}
+
+
+
+			footer {
+				padding-bottom: 50px;
+				text-align: center;
+
+			}
+
+			footer img {
+				height: 2vh;
+			}
+
+
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="/img/labelforce_logo.svg" alt="">
+		</div>
+		<h2>Machine Learning supported Crowdsourcing of Image Labeling</h2>
+		<p class="intro">
+			LabelForce is a crowdsourced Labeling App.
+			Instead of just letting users label all the images, we preprocess them with a convolutional autoencoder,
+			that can assess the similarity between images without labels.
+			Users get rewarded, if the majority of users labeled the image the same.
+			If they're wrong, they get a penalty.
+			This reward/penalty system is implemented with the decentralized blockchain technology <a href="https://www.ethereum.org/">ethereum</a>.
+			Ethereum is a new platform for building apps on the blockchain that is in its public beta phase.
+			Instead of just letting users label all the data like crowdflower, with LabelForce the manual labeling is minimized by the preprocessing.
+			We believe that LabelForce is currently the most cost effective and accurate way of labeling images.
+		</p>
+		<ul class="features">
+			<li>
+				<a href="/app.html">
+					<img src="/img/app_screenshot.png" alt="">
+					<h3>Mobile Webapp</h3>
+				</a>
+				<p>We created a cross platform mobile webapp utilizing Typescript and Firebase.</p>
+			</li>
+			<li>
+				<a href="/dashboard.html">
+					<img src="/img/webview_screenshot.png" alt="">
+					<h3>Live AI Experience</h3>
+				</a>
+				<p>Experience our novel way of the visualization of the neural network running in the backgroun.</p>
+			</li>
+			<li>
+				<a href="https://github.com/labelforce/">
+					<img src="/img/github.svg" alt="">
+					<h3>Open Source</h3>
+				</a>
+				<p>We have devided our code into 3 repositories
+					<ul>
+						<li><a href="https://github.com/labelforce/frontend">the app and webview frontend</a></li>
+						<li><a href="https://github.com/labelforce/python-backend">the machine learning backend</a></li>
+						<li><a href="https://github.com/labelforce/blockchain">the ethereum blockchain contract</a></li>
+					</ul>
+				</p>
+			</li>
+		</ul>
+
+
+		<footer>
+			<span>Build with</span>
+			<img src="/img/heart.svg" alt="">
+			<span>by Daniel, Johannes, Tim &amp; Tim @ <a href="http://hackzurich.com/">Hack Zurich</a></span>
+		</footer>
+	</body>
+</html>

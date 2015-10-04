@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+</head>
+<body class="labelforceApp">
+
+<div class="container swipe main">
+
+    <div class="quest">
+        Is this a <span class="js-label"></span>?
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="dislike-button pull-left">
+                <img src="/img/no.svg" alt="">
+            </div>
+        </div>
+        <div class="col-xs-4 swipe_image_container">
+            <div class="swipe_image" style="background-image: url(http://placehold.it/250x250)"></div>
+        </div>
+        <div class="col-xs-4">
+            <div class="like-button pull-right">
+                <img src="/img/yes.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="nextPoints">
+        <div class="ether js-nextEther"></div>
+        <div class="points js-nextPoints"></div>
+    </div>
+
+    <div class="currentPoints">
+        <div class="ether">
+            <img src="/img/ether_e.svg" alt=""><br>
+            <span class="js-ether"></span><br>
+            <small>Ether</small>
+        </div>
+        <div class="points">
+            <img src="/img/exp_crown.svg" alt=""><br>
+            <span class="js-points"></span><br>
+            <small>Experience</small>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>window.view = 'swipe'</script>
+<script src="main.js"></script>
+</body>
+</html>
